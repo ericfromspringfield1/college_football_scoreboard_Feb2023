@@ -1,0 +1,389 @@
+#eventsContainer {
+  font-family: 'Quantico', sans-serif; 
+  display: flex;
+  color: white;
+  padding: 10px;
+  border-width: 2em;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  border: #f5f5f5 1pt solid;
+  justify-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: space-evenly; 
+  border-radius: 12px;
+}
+
+#gameTime {
+  background-color: #454547;
+  width: 100%;
+}
+
+#awayTeamScore {
+  background-color: #454547;
+  width: 100%;
+}
+
+#e#awayTeamScore {
+  background-color: #454547;
+  width: 100%;
+} */
+
+
+
+#gameInfoContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  color: white;
+}
+
+#standingsContainer {
+  font-family: 'Gantari', sans-serif; 
+}
+
+#standings {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  color: white;
+}
+
+#venuePhotoContainer {
+  display: flex;
+  /* background-image: url('/images/backgroundphoto.jpeg');
+  width: 100%;
+  /* background-position-x: center;
+  background-position-y: center;  */
+  
+}
+
+
+#gameInfoContainer > div {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 10px;
+  line-height: 35px;
+  font-size: 25px;
+  
+}
+
+#weather {
+  font-family: 'Gantari', sans-serif; 
+}
+
+#venue {
+font-family: 'Rubik Maze', cursive;
+}
+
+#venue img {
+  padding: 10px;
+}
+
+#touchdown {
+  font-family: 'Quantico', sans-serif;
+}
+
+#winner {
+  font-family: 'Rubik Maze', cursive;    
+  background-color: white;  
+}
+
+#venuePhoto img {
+  margin-top: 3px;
+  color: black;
+  font-family: 'Gantari', sans-serif; 
+  
+}
+
+#theDownDistanceIs {
+  background-color: rgba(0, 0, 0, 0.767);
+  color: whitesmoke;
+}
+
+#currentPlay {
+  background-color: rgba(245, 212, 22, 0.966);
+  color: black;
+
+}
+
+#gameDescription {
+  color: rgb(26, 25, 25);
+  /* font-family: 'Overpass Mono', monospace; */
+  font-family: 'Gantari', sans-serif;
+  background-color: #f1f1f1;
+  margin-bottom: 2px;
+  margin-top: 2px;
+
+}
+
+#gameStatus {
+  /* font-family: 'Quantico', sans-serif; */
+  font-family: 'Gantari', sans-serif;
+  margin-top: 2px;
+  margin-bottom: 5px;
+}
+
+#scoreContainer {
+   /* background-image: url('./images/espn-logo.png'); */
+   /* border: 5pt dotted rgba(0, 0, 0, 0.788);  */
+   margin: 5px;
+
+}
+
+#awayTeam {
+  /* font-family: 'Quantico', sans-serif; */
+  /* font-family: 'Gantari', sans-serif; */
+  font-family: 'Rubik Dirt', cursive;
+  font-size: 5rem;
+  padding: 3px;
+
+  
+}
+#awayPre {
+  /* font-family: 'Quantico', sans-serif; */
+  /* font-family: 'Gantari', sans-serif; */
+  font-family: 'Rubik Dirt', cursive;
+  font-size: 5rem;
+  padding: 3px;
+  line-height: .85; 
+}
+
+#awayLive {
+  /* font-family: 'Quantico', sans-serif; */
+  /* font-family: 'Gantari', sans-serif; */
+  font-family: 'Rubik Dirt', cursive;
+  font-size: 5rem;
+  padding: 3px;
+  line-height: .85; 
+}
+
+
+
+#awayPredictor {
+  font-size: .8rem;
+  font-family: 'Gantari', sans-serif;
+  background-color: white;
+
+}
+
+#homeTeam {
+  font-family: 'Rubik Dirt', cursive;
+  font-size: 6rem;
+  text-align: left;
+}
+
+#homePre {
+  /* font-family: 'Quantico', sans-serif; */
+  /* font-family: 'Gantari', sans-serif; */
+  font-family: 'Rubik Dirt', cursive;
+  font-size: 5rem;
+  padding: 3px;
+  line-height: .85;
+}
+
+#homeLive {
+  /* font-family: 'Quantico', sans-serif; */
+  /* font-family: 'Gantari', sans-serif; */
+  font-family: 'Rubik Dirt', cursive;
+  font-size: 5rem;
+  padding: 3px;
+  line-height: .85;
+}
+
+
+#homePredictor {
+  font-size: 1.4rem;
+  font-family: 'Gantari', sans-serif;
+  background-color: white
+}
+
+
+#playsContainer {
+  /* font-family: 'Quantico', sans-serif; */
+  font-family: 'Gantari', sans-serif;
+}
+
+#currentPlayContainer {
+  /* font-family: 'Quantico', sans-serif; */
+  font-family: 'Gantari', sans-serif;
+  
+}
+
+#statsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;   
+}
+
+#homeStatsContainer {
+  /* font-family: 'Quantico', sans-serif; */
+  font-family: 'Gantari', sans-serif;
+  margin: 5px;
+  flex-grow: 1;
+
+}
+
+#theHomeReceivingLeader {
+    margin-bottom: 1.1px;
+    margin-right: 1.1px;
+}
+
+#theAwayReceivingLeader {
+    margin-bottom: 1.1px;
+}
+
+#awayStatsContainer {
+  /* font-family: 'Quantico', sans-serif; */
+  font-family: 'Gantari', sans-serif;
+  margin: 5px;
+  flex-grow: 1;
+
+}
+
+#scoringPlays {
+  /* font-family: 'Quantico', sans-serif; */
+  font-family: 'Gantari', sans-serif;
+  font-size: 1.3rem;
+  padding: 5px;
+  color: rgb(43, 41, 41);
+  margin: 5px;
+}
+
+
+#awayPassingStats {
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+#awayRushingStats {
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+#awayReceivingStats {
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+#gameInfoContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  color: white;
+}
+
+#gameInfoContainer > div {
+  background-color: #f1f1f1;
+  text-align: center;
+  line-height: 35px;
+  font-size: 25px;
+  
+}
+
+#weather {
+  font-family: 'Overpass Mono', monospace;
+}
+
+#venue {
+  font-family: 'Quantico', sans-serif;
+}
+
+#touchdown {
+  font-family: 'Quantico', sans-serif;
+  
+}
+
+#winner {
+  font-family: 'Quantico', sans-serif;
+  background-color: white;
+}
+
+#venuePhoto {
+  margin-top: 3px;
+}
+
+#theDownDistanceIs {
+  background-color: rgba(0, 0, 0, 0.767);
+  color: whitesmoke;
+}
+
+#currentPlay {
+  background-color: rgba(245, 212, 22, 0.966);
+  color: black;
+
+}
+
+#gameDescription {
+  color: rgb(26, 25, 25);
+  font-family: 'Overpass Mono', monospace;
+  background-color: #f1f1f1;
+  margin-bottom: 2px;
+  margin-top: 2px;
+
+}
+
+#gameStatus {
+  font-family: 'Quantico', sans-serif;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+#awayTeam {
+  font-family: 'Quantico', sans-serif;
+  padding: 3px;
+  
+}
+
+#homeTeam {
+  font-family: 'Quantico', sans-serif;
+  padding: 3px;
+  margin-bottom: 3px;
+
+}
+
+#playsContainer {
+  font-family: 'Quantico', sans-serif;
+}
+
+#currentPlayContainer {
+  font-family: 'Quantico', sans-serif;
+}
+
+#statsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;   
+}
+
+#homeStatsContainer {
+  font-family: 'Quantico', sans-serif;
+  margin: 5px;
+  flex-grow: 1;
+
+}
+
+#theHomeReceivingLeader {
+    margin-bottom: 1.1px;
+}
+
+#awayStatsContainer {
+  font-family: 'Quantico', sans-serif;
+  margin: 5px;
+  flex-grow: 1
+
+}
+
+#scoringPlays {
+  font-family: 'Quantico', sans-serif;
+  font-size: 1.3rem;
+  padding: 5px;
+  color: rgb(43, 41, 41);
+  margin: 5px;
+}
+
