@@ -1,4 +1,4 @@
-const scoreboardURL = 'http://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?limit=500&dates=20221201-20230115'
+const scoreboardURL = 'https://crossorigin.me/http://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?limit=500&dates=20221201-20230115'
 let thisGameId
 let gameIdsArray = []
 let gameIdArray = []
