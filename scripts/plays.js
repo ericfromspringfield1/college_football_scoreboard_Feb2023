@@ -18,7 +18,7 @@ let gameUrl
 const fetchScoreboard = async () => {
     const jsonData = await fetch (scoreboardURL, {
         method: "GET", // *GET, POST, PUT, DELETE, etc.
-        mode: "no-cors", // no-cors, *cors, same-origin
+        mode: "cors", // no-cors, *cors, same-origin
         credentials: "same-origin", // include, *same-origin, omit
         headers: {
             "Content-Type": "application/json",
