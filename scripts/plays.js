@@ -9,23 +9,27 @@ let gameUrl
 
 // Need a button to refresh just the game that has been clicked and a button to take you back to the list of games.
 
+// const displayData = async () => {
+//     const jsonData = await fetch (gameUrl)
+//     const data = await jsonData.json()
+//     console.log(data) 
+// }
+
 const fetchScoreboard = async () => {
     const jsonData = await fetch (scoreboardURL, {
         method: "GET", // *GET, POST, PUT, DELETE, etc.
         mode: "no-cors", // no-cors, *cors, same-origin
-        cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
         credentials: "same-origin", // include, *same-origin, omit
         headers: {
-          "Content-Type": "application/json",
-          // 'Content-Type': 'application/x-www-form-urlencoded',
+            "Content-Type": "application/json",
+            // 'Content-Type': 'application/x-www-form-urlencoded',
         },
         redirect: "follow", // manual, *follow, error
         referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url)
-        
     });
     const data = await jsonData.json()
     console.log(data)
-
+    
     
 
     // gameIdsArray = data.events.map(gameId => {
@@ -81,20 +85,11 @@ document.querySelectorAll("#eventsContainer").forEach(function (btn) {
         let clickedGame = document.querySelectorAll('#gameInfoContainer')
         clickedGame.innerHTML = renderClickedGame()
         clickedGame.innerHTML = scrollToTop()
-        
-        
-        
-        
     });
-    
 });
-
-
-// get theGame and fetch everything to show the clicked game
-  
 fetchScoreboard()
 
-
+// get theGame and fetch everything to show the clicked game  
 const renderClickedGame = () => 
 {
     
