@@ -19,15 +19,16 @@ const headers = {
     mode: "no-cors", // no-cors, *cors, same-origin
     credentials: "same-origin", // include, *same-origin, omit
     headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "text/json",
         "Access-Control-Allow_Origin": "*",
         "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
     },
     redirect: "follow", // manual, *follow, error
     referrerPolicy: "no-referrer-when-downgrade", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url)
 }
+const proxyUrl = 'https://crossorigin.me'
 const fetchScoreboard = async () => {
-    const jsonData = await fetch (scoreboardURL, headers );
+    const jsonData = await fetch (scoreboardURL + proxyUrl );
     const data = await jsonData.json()
     console.log(data)
     
