@@ -27,9 +27,10 @@ const headers = {
     redirect: "follow", // manual, *follow, error
     referrerPolicy: "no-referrer-when-downgrade", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url)
 }
-const proxyUrl = 'https://crossorigin.me'
+const proxyUrl = 'http://crossorigin.me/'
+const combinedUrl = proxyUrl + scoreboardURL
 const fetchScoreboard = async () => {
-    const jsonData = await fetch (scoreboardURL + proxyUrl, headers);
+    const jsonData = await fetch (combinedUrl, headers);
     const data = await jsonData.json()
     console.log(data)
     
