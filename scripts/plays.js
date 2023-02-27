@@ -14,27 +14,22 @@ let gameUrl
 //     const data = await jsonData.json()
 //     console.log(data) 
 // }
-
+const headers = {
+    method: "GET", // *GET, POST, PUT, DELETE, etc.
+    mode: "no-cors", // no-cors, *cors, same-origin
+    credentials: "same-origin", // include, *same-origin, omit
+    headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow_Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
+    },
+    redirect: "follow", // manual, *follow, error
+    referrerPolicy: "no-referrer-when-downgrade", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url)
+}
 const fetchScoreboard = async () => {
-    try {
-      const jsonData = await fetch(scoreboardURL, {
-        method: "GET",
-        mode: "no-cors",
-        credentials: "same-origin",
-        headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow_Origin": "*",
-          "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
-        },
-        redirect: "follow",
-        referrerPolicy: "no-referrer-when-downgrade",
-      });
-      const data = await jsonData.json();
-      console.log(data);
-    } catch (error) {
-      console.error(error);
-    }
-
+    const jsonData = await fetch (scoreboardURL, headers );
+    const data = await jsonData.json()
+    console.log(data)
     
     
 
