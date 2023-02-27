@@ -16,21 +16,25 @@ let gameUrl
 // }
 
 const fetchScoreboard = async () => {
-    const jsonData = await fetch (scoreboardURL, {
-    method: "GET",
-    mode: "no-cors",
-    credentials: "same-origin",
-    headers: {
-        "Content-Type": "application/json",
-        "Access-Control-Allow_Origin": "*",
-        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
-    },
-    redirect: "follow",
-    referrerPolicy: "no-referrer-when-downgrade",
-});
+    try {
+      const jsonData = await fetch(scoreboardURL, {
+        method: "GET",
+        mode: "no-cors",
+        credentials: "same-origin",
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow_Origin": "*",
+          "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
+        },
+        redirect: "follow",
+        referrerPolicy: "no-referrer-when-downgrade",
+      });
+      const data = await jsonData.json();
+      console.log(data);
+    } catch (error) {
+      console.error(error);
+    }
 
-const data = await jsonData.json();
-console.log(data);
     
     
 
