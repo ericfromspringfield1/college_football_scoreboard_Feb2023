@@ -1,5 +1,5 @@
 // const scoreboardURL = 'http://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?limit=500&dates=20221201-20230115'
-const scoreboardURL = 'https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard'
+const scoreboardURL = 'http://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard'
 let thisGameId
 let gameIdsArray = []
 let gameIdArray = []
@@ -16,10 +16,11 @@ let gameUrl
 // }
 const headers = {
     method: "GET", // *GET, POST, PUT, DELETE, etc.
-    mode: "no-cors", // no-cors, *cors, same-origin
+    mode: "cors", // no-cors, *cors, same-origin
     credentials: "same-origin", // include, *same-origin, omit
     headers: {
-        "Content-Type": "text/json",
+        "Content-Type": "application/json",
+        "Accept": "application/json",
         "Access-Control-Allow_Origin": "*",
         "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
     },
@@ -28,7 +29,7 @@ const headers = {
 }
 const proxyUrl = 'https://crossorigin.me'
 const fetchScoreboard = async () => {
-    const jsonData = await fetch (scoreboardURL + proxyUrl );
+    const jsonData = await fetch (scoreboardURL + proxyUrl, headers);
     const data = await jsonData.json()
     console.log(data)
     
