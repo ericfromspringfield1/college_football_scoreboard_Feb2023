@@ -1,5 +1,5 @@
-// const scoreboardURL = 'http://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?limit=500&dates=20221201-20230115'
-const scoreboardURL = 'http://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard'
+const scoreboardURL = 'http://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?limit=500&dates=20221201-20230115'
+// const scoreboardURL = 'http://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard'
 let thisGameId
 let gameIdsArray = []
 let gameIdArray = []
@@ -9,32 +9,11 @@ let gameUrl
 
 // Need a button to refresh just the game that has been clicked and a button to take you back to the list of games.
 
-// const displayData = async () => {
-//     const jsonData = await fetch (gameUrl)
-//     const data = await jsonData.json()
-//     console.log(data) 
-// }
-const headers = {
-    method: "GET", // *GET, POST, PUT, DELETE, etc.
-    mode: "cors", // no-cors, *cors, same-origin
-    credentials: "same-origin", // include, *same-origin, omit
-    headers: {
-        "Content-Type": "application/json",
-        "Accept": "application/json",
-        "Access-Control-Allow_Origin": "*",
-        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
-    },
-    redirect: "follow", // manual, *follow, error
-    referrerPolicy: "no-referrer-when-downgrade", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url)
-}
-const proxyUrl = 'https://crossorigin.me/'
-const combinedUrl = proxyUrl + scoreboardURL
+
 const fetchScoreboard = async () => {
-    const jsonData = await fetch (combinedUrl, headers);
+    const jsonData = await fetch (scoreboardURL);
     const data = await jsonData.json()
     console.log(data)
-    
-    
 
     // gameIdsArray = data.events.map(gameId => {
     //     thisId = gameId.id
@@ -637,7 +616,7 @@ if (data.header.competitions[0].status.type.completed === true && data.header.co
          }, 10);
          break;
 
-         case(homeScoreInt > awayScoreInt && homeRank <= awayRank):
+        case(homeScoreInt > awayScoreInt && homeRank <= awayRank):
         homeWinner = document.getElementById('winner') 
         homeWinner.innerHTML =`WINNER <br> <img src="${homeLogo}" width="250 height="250"><br>${homeScoreInt} - ${awayScoreInt}`
         venuePhoto.style.display = 'none'
